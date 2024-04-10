@@ -1,0 +1,97 @@
+[gd_scene load_steps=5 format=3 uid="uid://bqagh8tsiprn4"]
+
+[ext_resource type="PackedScene" uid="uid://cbv6e0g4cn86j" path="res://celula.tscn" id="1_77qyv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d3jun"]
+bg_color = Color(0.835294, 0.47451, 0.564706, 1)
+border_color = Color(0.835294, 0.47451, 0.564706, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+anti_aliasing = false
+anti_aliasing_size = 0.01
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_thmxo"]
+bg_color = Color(0.760784, 0.560784, 0.596078, 1)
+border_color = Color(0.760784, 0.560784, 0.596078, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+anti_aliasing_size = 0.01
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rxabp"]
+bg_color = Color(0.505882, 0.32549, 0.360784, 1)
+border_color = Color(0.505882, 0.32549, 0.360784, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+anti_aliasing_size = 1.331
+
+[node name="main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="bg" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0235294, 0.027451, 0.0235294, 1)
+
+[node name="células" type="GridContainer" parent="."]
+layout_mode = 0
+offset_right = 38.0
+offset_bottom = 40.0
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 3
+
+[node name="celula" parent="células" instance=ExtResource("1_77qyv")]
+layout_mode = 2
+
+[node name="celula2" parent="células" instance=ExtResource("1_77qyv")]
+layout_mode = 2
+
+[node name="celula3" parent="células" instance=ExtResource("1_77qyv")]
+layout_mode = 2
+
+[node name="celula4" parent="células" instance=ExtResource("1_77qyv")]
+layout_mode = 2
+
+[node name="celula5" parent="células" instance=ExtResource("1_77qyv")]
+layout_mode = 2
+
+[node name="celula6" parent="células" instance=ExtResource("1_77qyv")]
+layout_mode = 2
+
+[node name="celula7" parent="células" instance=ExtResource("1_77qyv")]
+layout_mode = 2
+
+[node name="celula8" parent="células" instance=ExtResource("1_77qyv")]
+layout_mode = 2
+
+[node name="celula9" parent="células" instance=ExtResource("1_77qyv")]
+layout_mode = 2
+
+[node name="btnlimpar" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -25.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_d3jun")
+theme_override_styles/hover = SubResource("StyleBoxFlat_thmxo")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_rxabp")
+text = "Reiniciar"
